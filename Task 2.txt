@@ -1,0 +1,50 @@
+Scenario 1: Submit survey with wrong answer
+
+- Get a valid survey link 
+- Submit the survey with the following answers:
+
+    answers = (
+        "Purple",     
+        "Jazz",     
+        "4",        
+        "Titanic"     
+    )
+	
+Expected Result: The server should respond with a 400 status code, or display a validation error .
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+Scenario 2: Submit survey with empty answer
+
+- Get a valid survey link 
+- Submit the survey with the following answers:
+
+    answers = (
+        "Red",     
+        "",     
+        "4",        
+        "Titanic"     
+    )
+	
+Expected Result: The server should respond with a 400 status code, or display a validation error .
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+Scenario 3: Submit different answers at the same time
+
+- Get a valid survey link 
+- Submit 2 different answers from 2 different instances at the same time
+
+
+Expected Result: Both submitions should be processed and stored.
+
+
+
